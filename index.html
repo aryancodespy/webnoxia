@@ -74,10 +74,6 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#blog" class="navbar-link" data-navbar-link>Blog</a>
-          </li>
-
-          <li class="navbar-item">
             <a href="#footer-contact" class="navbar-link" data-navbar-link>Contact Us</a>
           </li>
 
@@ -85,7 +81,7 @@
 
       </nav>
 
-      <a href="#footer-contact" class="btn">
+      <a href="#contact" class="btn">
         <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
 
         <span>Get A Quote</span>
@@ -97,10 +93,6 @@
 
     </div>
   </header>
-
-
-
-
 
   <main>
     <article>
@@ -133,10 +125,6 @@
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #ABOUT
@@ -188,10 +176,6 @@
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #SERVICE
@@ -271,10 +255,6 @@
 
         </div>
       </section>
-
-
-
-
 
       <!-- 
         - #FEATURES
@@ -369,216 +349,49 @@
         </div>
       </section>
 
-
-
-
-
       <!-- 
-        - #BLOG
+        Contact Form
       -->
-
-      <section class="section blog" id="blog">
+      <section class="section contact" id="contact" aria-label="contact">
         <div class="container">
 
-          <h2 class="h2 section-title underline">Our Blog & News</h2>
+          <h2 class="h2 section-title underline">Get A Quote</h2>
 
-          <ul class="blog-list">
+          <form action="" class="contact-form">
 
-            <li>
-              <div class="blog-card">
+            <div class="input-wrapper">
+              <input type="text" name="name" aria-label="name" placeholder="Your name*" required class="input-field">
 
-                <figure class="banner">
-                  <a href="#">
-                    <img src="./assets/images/blog-1.jpg" width="750" height="350" loading="lazy"
-                      alt="Vestibulum massa arcu, consectetu pellentesque scelerisque." class="img-cover">
-                  </a>
-                </figure>
+              <input type="email" name="email_address" aria-label="email" placeholder="Email address*" required
+                class="input-field">
+            </div>
 
-                <div class="content">
+            <div class="input-wrapper">
+              <input type="text" name="subject" aria-label="subject" placeholder="Subject" class="input-field">
 
-                  <h3 class="h3 title">
-                    <a href="#">
-                      Innovative Design Trends: Keeping Your Projects Ahead of the Curve                    </a>
-                  </h3>
+              <input type="number" name="phone" aria-label="phone" placeholder="Phone number*" class="input-field" required>
+            </div>
 
-                  <p class="text">
-                    Stay updated on the latest design trends shaping digital experiences and interfaces.
-                  </p>
+            <textarea name="message" aria-label="message" placeholder="Your message...*" required
+              class="input-field"></textarea>
 
-                  <div class="meta">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="terms_and_policy" id="terms" required class="checkbox">
 
-                    <div class="publish-date">
-                      <ion-icon name="time-outline"></ion-icon>
+              <label for="terms" class="label">
+                Accept <a href="#" class="label-link">Terms of Services</a> and <a href="#" class="label-link">Privacy
+                  Policy</a>
+              </label>
+            </div>
 
-                      <time datetime="2024-03-07">7 March, 2024</time>
-                    </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
 
-                    <button class="comment" aria-label="Comment">
-                      <ion-icon name="chatbubble-outline"></ion-icon>
-
-                      <data value="15">15</data>
-                    </button>
-
-                    <button class="share" aria-label="Share">
-                      <ion-icon name="share-social-outline"></ion-icon>
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="banner">
-                  <a href="#">
-                    <img src="./assets/images/blog-2.jpg" width="750" height="350" loading="lazy"
-                      alt="Quisque egestas iaculis felis eget placerat ut pulvinar mi." class="img-cover">
-                  </a>
-                </figure>
-
-                <div class="content">
-
-                  <h3 class="h3 title">
-                    <a href="#">
-                      Mastering User-Centered Design                    </a>
-                  </h3>
-
-                  <p class="text">
-                    Enhance engagement through intuitive interface designs and user-centric approaches.
-                  </p>
-
-                  <div class="meta">
-
-                    <div class="publish-date">
-                      <ion-icon name="time-outline"></ion-icon>
-
-                      <time datetime="2024-03-07">7 March, 2024</time>
-                    </div>
-
-                    <button class="comment" aria-label="Comment">
-                      <ion-icon name="chatbubble-outline"></ion-icon>
-
-                      <data value="15">15</data>
-                    </button>
-
-                    <button class="share" aria-label="Share">
-                      <ion-icon name="share-social-outline"></ion-icon>
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="banner">
-                  <a href="#">
-                    <img src="./assets/images/blog-3.jpg" width="750" height="350" loading="lazy"
-                      alt="Fusce sem ligula, imperdiet sed nisi sit amet, euismod posuere." class="img-cover">
-                  </a>
-                </figure>
-
-                <div class="content">
-
-                  <h3 class="h3 title">
-                    <a href="#">
-                      From Idea to Market: Navigating Product Launches                    </a>
-                  </h3>
-
-                  <p class="text">
-                    Strategies for successful product launches from inception to market readiness.
-                  </p>
-
-                  <div class="meta">
-
-                    <div class="publish-date">
-                      <ion-icon name="time-outline"></ion-icon>
-
-                      <time datetime="2024-03-07">7 March, 2024</time>
-                    </div>
-
-                    <button class="comment" aria-label="Comment">
-                      <ion-icon name="chatbubble-outline"></ion-icon>
-
-                      <data value="15">15</data>
-                    </button>
-
-                    <button class="share" aria-label="Share">
-                      <ion-icon name="share-social-outline"></ion-icon>
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="banner">
-                  <a href="#">
-                    <img src="./assets/images/blog-4.jpg" width="750" height="350" loading="lazy"
-                      alt="Donec feugiat mollis nisi in dignissim. Morbi sollicitudin quis." class="img-cover">
-                  </a>
-                </figure>
-
-                <div class="content">
-
-                  <h3 class="h3 title">
-                    <a href="#">
-                      Testing Strategies: Ensuring Quality in Software Development Projects                    </a>
-                  </h3>
-
-                  <p class="text">
-                    Discover effective methods to ensure robustness and reliability in your software.
-                  </p>
-
-                  <div class="meta">
-
-                    <div class="publish-date">
-                      <ion-icon name="time-outline"></ion-icon>
-
-                      <time datetime="2024-03-07">7 March, 2024</time>
-                    </div>
-
-                    <button class="comment" aria-label="Comment">
-                      <ion-icon name="chatbubble-outline"></ion-icon>
-
-                      <data value="15">15</data>
-                    </button>
-
-                    <button class="share" aria-label="Share">
-                      <ion-icon name="share-social-outline"></ion-icon>
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
+          </form>
 
         </div>
       </section>
-
     </article>
   </main>
-
-
-
-
 
   <!-- 
     - #FOOTER
@@ -762,10 +575,6 @@
 
   </footer>
 
-
-
-
-
   <!-- 
     - #GO TO TOP
   -->
@@ -773,10 +582,6 @@
   <a href="#top" class="go-top  active" aria-label="Go To Top" data-go-top>
     <ion-icon name="arrow-up-outline"></ion-icon>
   </a>
-
-
-
-
 
   <!-- 
     - custom js link
