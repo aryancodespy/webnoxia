@@ -198,6 +198,10 @@ body {
   transition: var(--transition-2);
 }
 
+.cta {
+ width: 155px;
+}
+
 .btn:is(:hover, :focus) { background-position: right; }
 
 .w-100 { width: 100%; }
