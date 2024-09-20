@@ -851,6 +851,15 @@ textarea .input-field {
   }
   .card {
     margin: 10px 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  .face.front {
+    font-size: 65%;
+  }
+  .face.back {
+    font-size: 50%;
   }
 }
 
@@ -875,10 +884,6 @@ textarea .input-field {
   .container {
     max-width: 550px;
     margin-inline: auto;
-  }
-
-  .face {
-    font-size: 65%;
   }
 
   
