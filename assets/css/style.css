@@ -195,8 +195,69 @@ body {
  width: 155px;
 }
 
-.option-title {
-  color: var(--st-patricks-blue);
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: 2s ease-in-out;
+  transform: perspective(500px) rotateY(0deg);
+
+}
+.card .face.front {
+  background: var(--gradient-2);
+  color: var(--white);
+  box-shadow:0 0 0.8rem var(--safety-orange);
+  border-radius: 15px;
+}
+
+.card:hover .face.front {
+  transform: perspective(500px) rotateY(180deg);
+}
+.card .face.back {
+  background: var(--gradient-2);
+  box-shadow:0 0 0.8rem var(--safety-orange);
+  color: var(--white);
+  transform: perspective(500px) rotateY(180deg);
+  padding: 10px 25px;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.card:hover .face.back {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+.face h3{
+  text-transform: capitalize;
+  transform: perspective(500px) translateZ(50px);
+}
+
+.face .text {
+  padding: 0 20px;
+  transform: perspective(500px) translateZ(50px);
+
 }
 
 .btn:is(:hover, :focus) { background-position: right; }
@@ -782,6 +843,26 @@ textarea .input-field {
 \*-----------------------------------*/
 
 /**
+ * responsive for smaller than 550px screen
+ */
+ @media (max-width: 550px) {
+  .card-container {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 770px) {
+  .card-container {
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 10px 10px;
+  }
+}
+/**
  * responsive for larger than 550px screen
  */
 
@@ -796,9 +877,12 @@ textarea .input-field {
     margin-inline: auto;
   }
 
-  .section-title { --fs-3: 3.6rem; }
+  .face {
+    font-size: 65%;
+  }
 
-
+  
+  .section-title { --fs-3: 3.6rem;}
 
   /**
    * HEADER
