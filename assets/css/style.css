@@ -371,7 +371,7 @@ body {
 }
 .dropdown {
   position: absolute;
-  background-color: var(--space-cadet-2);
+  background-color: var(--white);
   padding: 10px 25px;
   z-index: 999;
   display: none;
@@ -384,7 +384,7 @@ body {
 }
 
 .dropdown li a {
-  color: var(--white);
+  color: var(--space-cadet-1);
   font-size: var(--fs-8);
   font-weight: var(--fw-600);
 }
