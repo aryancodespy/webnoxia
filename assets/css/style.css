@@ -106,9 +106,6 @@
 }
 
 
-
-
-
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
@@ -173,10 +170,6 @@ body {
 ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
 
 ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
-
-
-
-
 
 /*-----------------------------------*\
   #REUSED STYLE
@@ -365,6 +358,44 @@ body {
 }
 
 
+.service-dropdown {
+  display: inline-block;
+  position: relative;
+  transition: all 500ms;
+
+}
+
+.service-dropdown a {
+  display: block;
+  padding: 10px 0;
+}
+.dropdown {
+  position: absolute;
+  background-color: var(--space-cadet-2);
+  padding: 10px 25px;
+  z-index: 999;
+  display: none;
+  border-bottom: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.dropdown li {
+  display: block;
+}
+
+.dropdown li a {
+  color: var(--white);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-600);
+}
+
+.service-dropdown:hover .dropdown {
+  display: block;
+}
+.dropdown li:hover {
+  text-decoration: underline;
+  font-style: italic;
+}
 
 
 
