@@ -58,9 +58,9 @@ window.addEventListener("scroll", function () {
 // Disable right-click context menu
 document.addEventListener('contextmenu', event => event.preventDefault());
 
-// Disable F12 key and Ctrl+Shift+I combo
+// Disable F12 key and Ctrl+Shift+I and Ctrl+U combo
 document.addEventListener('keydown', event => {
-  if (event.keyCode === 123 || (event.ctrlKey && event.shiftKey && event.keyCode === 73)) {
+  if (event.keyCode === 123 || (event.ctrlKey && event.shiftKey && event.keyCode === 73) || (event.ctrlKey && event.keyCode === 85) {
     event.preventDefault();
   }
 });
