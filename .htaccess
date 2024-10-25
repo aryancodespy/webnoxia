@@ -28,3 +28,9 @@
  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
  Header append Vary User-Agent
 </IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.webnoxia.com [NC]
+RewriteRule (.*) https://webnoxia.com/$1 [L,R=301]
+</IfModule>
