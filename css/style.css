@@ -632,7 +632,7 @@ ul.dropdown-menu li {
 }
 @media (max-width: 768px) {
   .banner .block h1 {
-    font-size: 45px;
+    font-size: 45px !important;
     line-height: 70px;
   }
   .banner {
