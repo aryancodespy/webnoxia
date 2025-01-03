@@ -1595,3 +1595,12 @@ ul.dropdown-menu li {
 #scroll-btn:hover {
   background-color: #ff4528;
 }
+
+.sub-title, .black-text {
+  color: #000;
+}
+
+.sub-title {
+  font-weight: 900;
+  font-size: 30px;
+}
