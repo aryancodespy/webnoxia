@@ -1,4 +1,7 @@
-User-agent: *
+User-agent: Twitterbot
 Disallow:
+
+User-agent: *
+Disallow: /
 
 sitemap: https://www.webnoxia.com/sitemap.xml
