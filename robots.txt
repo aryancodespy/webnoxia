@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: /
 
+User-agent: AhrefsSiteAudit
+Allow: /
+
 sitemap: https://www.webnoxia.com/sitemap.xml
