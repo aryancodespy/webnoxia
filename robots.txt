@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: https://www.webnoxia.com/project
+Disallow: /projects.html
 
 sitemap: https://www.webnoxia.com/sitemap.xml
