@@ -171,24 +171,31 @@ function topFunction() {
 }
 
 // AJAX for Form Submission
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault(); // Prevent default form submission
-  const form = e.target;
-  const formData = new FormData(form);
+$('#contact-form').on('submit', function (e) {
+    e.preventDefault();
 
-  fetch(form.action, {
-    method: "POST",
-    body: formData
-  })
-  .then(response => response.text())
-  .then(data => {
-    document.querySelector('.contact__msg').style.display = 'block';
-    document.querySelector('.contact__msg').innerHTML = data;
-    form.reset();
-  })
-  .catch(error => {
-    alert('There was an error sending the message.');
-    console.error(error);
+    var form = $(this);
+    var formData = new FormData(this);
+
+    $.ajax({
+      url: form.attr('action'),
+      type: form.attr('method'),
+      data: formData,
+      contentType: false,
+      processData: false,
+      success: function (response) {
+        $('.contact__msg').fadeIn().html(response); // ✅ Show the message
+        form[0].reset(); // ✅ Reset the form
+        setTimeout(function () {
+          $('.contact__msg').fadeOut();
+        }, 5000); // Hide after 5s
+      },
+      error: function (xhr) {
+        $('.contact__msg').fadeIn().html("❌ Failed to send message.");
+        setTimeout(function () {
+          $('.contact__msg').fadeOut();
+        }, 5000);
+      }
+    });
   });
-});
 
