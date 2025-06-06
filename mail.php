@@ -78,4 +78,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     http_response_code(403);
     echo "Access Denied.";
 }
+
+if ($mail->send()) {
+    echo "<div class='alert alert-success'>Message has been sent successfully!</div>";
+} else {
+    echo "<div class='alert alert-danger'>Mailer Error: " . $mail->ErrorInfo . "</div>";
+}
+
 ?>
