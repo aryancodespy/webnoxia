@@ -172,30 +172,26 @@ function topFunction() {
 
 // AJAX for Form Submission
 $('#contact-form').on('submit', function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    var form = $(this);
-    var formData = new FormData(this);
+  var form = $(this);
+  var formData = new FormData(this);
 
-    $.ajax({
-      url: form.attr('action'),
-      type: form.attr('method'),
-      data: formData,
-      contentType: false,
-      processData: false,
-      success: function (response) {
-        $('.contact__msg').fadeIn().html(response); // ✅ Show the message
-        form[0].reset(); // ✅ Reset the form
-        setTimeout(function () {
-          $('.contact__msg').fadeOut();
-        }, 5000); // Hide after 5s
-      },
-      error: function (xhr) {
-        $('.contact__msg').fadeIn().html("❌ Failed to send message.");
-        setTimeout(function () {
-          $('.contact__msg').fadeOut();
-        }, 5000);
-      }
-    });
+  $.ajax({
+    url: form.attr('action'),
+    type: form.attr('method'),
+    data: formData,
+    contentType: false,
+    processData: false,
+    success: function (response) {
+      let msg = response.trim() !== "" ? response : "<div class='alert alert-success'>Email sent!</div>";
+      $('.contact__msg').fadeIn().html(msg);
+      form[0].reset();
+      setTimeout(() => { $('.contact__msg').fadeOut(); }, 5000);
+    },
+    error: function () {
+      $('.contact__msg').fadeIn().html("<div class='alert alert-danger'>Something went wrong. Please try again.</div>");
+      setTimeout(() => { $('.contact__msg').fadeOut(); }, 5000);
+    }
   });
-
+});
