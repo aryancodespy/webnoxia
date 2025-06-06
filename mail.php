@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Sender & Recipients
         $mail->setFrom('aryan@webnoxia.com', 'Webnoxia Contact');
-        $mail->addAddress('hello@webnoxia.com', 'Webnoxia'); // Your destination email
+        $mail->addAddress('aryan.webnoxia@gmail.com', 'Webnoxia'); // Your destination email
 
         // Optional: Reply-To, CC, BCC
         $mail->addReplyTo($email, $name);
