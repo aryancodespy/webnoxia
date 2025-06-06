@@ -29,13 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'your@gmail.com'; // Change this
-        $mail->Password   = 'your_app_password'; // Use App Password
-        $mail->SMTPSecure = 'tls'; // or 'ssl'
+        $mail->Username   = 'aryan.webnoxia@gmail.com'; // Change this
+        $mail->Password   = 'vwil wjed uhxc rsjk'; // Use App Password
+        $mail->SMTPSecure = 'TLS'; // or 'ssl'
         $mail->Port       = 587; // or 465 for ssl
 
         // Sender & Recipients
-        $mail->setFrom('no-reply@webnoxia.com', 'Webnoxia Contact');
+        $mail->setFrom('aryan@webnoxia.com', 'Webnoxia Contact');
         $mail->addAddress('hello@webnoxia.com', 'Webnoxia'); // Your destination email
 
         // Optional: Reply-To, CC, BCC
