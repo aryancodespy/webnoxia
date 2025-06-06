@@ -31,7 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->SMTPAuth   = true;
         $mail->Username   = 'aryan.webnoxia@gmail.com'; // Change this
         $mail->Password   = 'vwil wjed uhxc rsjk'; // Use App Password
-        $mail->SMTPSecure = 'TLS'; // or 'ssl'
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // recommended by chatgpt
+        // $mail->SMTPSecure = 'TLS'; // or 'ssl'
         $mail->Port       = 587; // or 465 for ssl
 
         // Sender & Recipients
