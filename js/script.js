@@ -169,3 +169,26 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// AJAX for Form Submission
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent default form submission
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    document.querySelector('.contact__msg').style.display = 'block';
+    document.querySelector('.contact__msg').innerHTML = data;
+    form.reset();
+  })
+  .catch(error => {
+    alert('There was an error sending the message.');
+    console.error(error);
+  });
+});
+
