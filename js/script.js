@@ -170,28 +170,3 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-// AJAX for Form Submission
-$('#contact-form').on('submit', function (e) {
-  e.preventDefault();
-
-  var form = $(this);
-  var formData = new FormData(this);
-
-  $.ajax({
-    url: form.attr('action'),
-    type: form.attr('method'),
-    data: formData,
-    contentType: false,
-    processData: false,
-    success: function (response) {
-      let msg = response.trim() !== "" ? response : "<div class='alert alert-success'>Email sent!</div>";
-      $('.contact__msg').fadeIn().html(msg);
-      form[0].reset();
-      setTimeout(() => { $('.contact__msg').fadeOut(); }, 5000);
-    },
-    error: function () {
-      $('.contact__msg').fadeIn().html("<div class='alert alert-danger'>Something went wrong. Please try again.</div>");
-      setTimeout(() => { $('.contact__msg').fadeOut(); }, 5000);
-    }
-  });
-});
